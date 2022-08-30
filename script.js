@@ -5,6 +5,9 @@ let totalPerPerson = document.getElementById("total-amount");
 let resetButton = document.getElementById("reset");
 let tips = document.querySelectorAll(".btn");
 let error = document.querySelector('.error-msg');
+let customInput =  document.querySelector('.cutom-input');
+
+
 
 let billValue = 0;
 billInput.addEventListener('input', function () {
@@ -28,6 +31,12 @@ tips.forEach(element => {
     element.addEventListener('click', persentageClick);
 });
 
+let persentageValue = 0;
+customInput.addEventListener('input', function () {
+    persentageValue = parseFloat(customInput.value)/100;
+    console.log(persentageValue);
+});
+
 let tipValue = 0;
 
 function persentageClick(event) {
@@ -45,10 +54,31 @@ function calculateTip (){
     if(peopleInput.value >=1 && billValue >= 1){
         let tipAmount = ((billValue * tipValue)/(peopleValue));
         tipPerPerson.innerHTML = `$  ${tipAmount}` ;
+
         let totalAmount = (billValue/peopleValue) + tipAmount;
-        totalPerPerson.innerHTML = `$  ${totalAmount}` ;      
+        totalPerPerson.innerHTML = `$  ${totalAmount}` ;   
+    }
+    if(persentageValue>0){
+        
+        let tipAmount2 = ((billValue * persentageValue)/(peopleValue));
+        tipPerPerson.innerHTML = `$  ${tipAmount2}` ;
+   
+        let totalAmount2 = (billValue/peopleValue) + tipAmount2;
+        totalPerPerson.innerHTML = `$  ${totalAmount2}` ; 
     }
 }
 
 calculateTip();
+
+resetButton.addEventListener('click', resetCalculator);
+
+function resetCalculator(){
+    billInput.value = '';
+    peopleInput.value = '';
+    tips.forEach(element => {
+        element.classList.remove('btn-active');
+    });
+    tipPerPerson.innerHTML = '$ 0.0';
+    totalPerPerson.innerHTML = '$ 0.0';
+}
 
