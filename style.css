@@ -145,6 +145,9 @@ body{
     background-color:#00aa93;
     border: 5px solid #00ffdda5;
 }
+.people-container{
+    margin-top: 30px;
+}
 
 /* responsive */
 
