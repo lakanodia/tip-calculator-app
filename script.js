@@ -4,6 +4,7 @@ let tipPerPerson = document.getElementById("tip-amount");
 let totalPerPerson = document.getElementById("total-amount");
 let resetButton = document.getElementById("reset");
 let tips = document.querySelectorAll(".btn");
+let error = document.querySelector('.error-msg');
 
 let billValue = 0;
 billInput.addEventListener('input', function () {
@@ -16,6 +17,11 @@ peopleInput.addEventListener('input', function () {
     peopleValue = parseFloat(peopleInput.value);
     console.log(peopleValue);
       calculateTip();
+    if (peopleValue == 0) {
+        error.classList.add('active');
+    }else{
+        error.classList.remove('active');
+    }
 });
 
 tips.forEach(element => {
@@ -31,7 +37,6 @@ function persentageClick(event) {
             element.classList.add('btn-active');
             tipValue = parseFloat((element.innerHTML))/100;
             console.log(tipValue);
-          
         }
     });
 }
