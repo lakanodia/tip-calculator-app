@@ -1,0 +1,136 @@
+body{
+    background-color: #C5E4E7;
+    font-family: 'Courier New', Courier, monospace;
+}
+.calculator-block{
+    max-width: 960px;
+    width: 100%;
+    height: 480px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    margin-top: 120px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.bill-block{
+    max-width: 420px;
+    width: 100%;
+}
+.dollar-sign,
+.people-sign    {
+    max-width: 12px;
+    width: 100%;
+    opacity: 0.7;
+    vertical-align: middle;
+}
+.error-msg{
+    color: rgb(213, 16, 16);
+    font-size: 13px;
+    font-weight: 600;
+    display: none;
+}
+.active{
+    display: block;
+}
+.input-text{
+    border: none;
+    border-radius: 5px;
+    background-color: #F3F9FA;
+    color: #00474B;
+    max-width: 380px;
+    width: 100%;
+    height: 50px;
+    outline: none;
+}
+.input-wrapper{
+    margin: 15px 0;
+}
+.label-wrapper{
+    margin: 30px 0;
+}
+
+.btn-block{
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+   
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 80px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #00474B;
+    color: white;
+    margin: 10px;
+    height: 38px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #0d5c60;
+}
+.btn-active{
+    background: #26C2AE;
+}
+.btn-active:hover{
+    background: #32e8d0;
+}
+.cutom-input{
+    max-width: 74px;
+    width: 100%;
+    border-radius: 5px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-block{
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+    background: #00474B;
+    padding: 25px;
+    font-weight: 900;
+}
+
+.amount-block,
+.total-block{
+    display: flex;
+    justify-content: space-around;
+}
+.tip-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.tip-amount{
+    font-size: 50px;
+    color: #26C2AE;
+}
+.person{
+    font-size: 10px;
+    font-style: italic;
+}
+.reset{
+    max-width: 400px;
+    width: 100%;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #26C2AE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
