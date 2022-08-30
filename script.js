@@ -75,6 +75,7 @@ resetButton.addEventListener('click', resetCalculator);
 function resetCalculator(){
     billInput.value = '';
     peopleInput.value = '';
+    customInput.value = '';
     tips.forEach(element => {
         element.classList.remove('btn-active');
     });
