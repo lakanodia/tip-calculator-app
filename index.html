@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="calculator-block">
+        <div class="bill-block">
+            <label for="">Bill</label>
+            <div class="input-wrapper">
+                <input class="input-text" type="number" id="input-bill">
+                <img class="dollar-sign" src="img/dollar.png" alt="doolar-img">
+            </div>
+            <div class="tip-container">
+                <div class="label-wrapper"> Select Tip %</div>
+            </div>
+            <div class="btn-block">
+                <div class="btn" id="tip-persentage-5">5%</div>
+                <div class="btn" id="tip-persentage-10">10%</div>
+                <div class="btn btn-active" id="tip-persentage-15">15%</div>
+                <div class="btn" id="tip-persentage-25">25%</div>
+                <div class="btn" id="tip-persentage-50">50%</div>
+                <div class="btn" >
+                    <input class="cutom-input" type="text" placeholder="Custom">
+                </div>
+            </div>
+
+            <div class="people-container">
+                <div class="label-wrapper-people"> Number of People</div>
+            </div>
+            <div class="input-wrapper">
+                <input class="input-text" type="text" id="people-input" >
+                <img class="people-sign" src="img/person.png" alt="person-img">
+            </div>
+            <div class="error-msg">Cant't be Zero</div>
+        </div>
+
+
+        <div class="result-block">
+            <div class="amount-block">
+                <p class="tip-title">Tip Amount <span class="person">/person</span> </p>
+                <p class="tip-amount"  id="tip-amount"> $ 0.0</p>
+            </div>
+            <div class="total-block">
+                <p class="tip-title" >Total <span class="person">/person</span> </p>
+                <p class="tip-amount" id="total-amount" >$ 0.0</p>
+            </div>
+            <button class="reset" id="reset"> Reset </button>
+            <div class="reset-block"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
